@@ -7,6 +7,7 @@ export const saveTransaction = async (req, res) => {
       data.push(dt.replace(/[{}]/g, "").replace(/[""]/g, ""));
     });
 
+    console.log("uploaded successfully");
     return res.status(200).json({ message: "Uploaded successfully", data });
   } catch (ex) {
     return res

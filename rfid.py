@@ -25,7 +25,7 @@ def read_file(file):
 
 data = read_file("transactions.txt")
 res = requests.post(
-    'http://localhost:3000/transaction', json=data)
+    'http://localhost:3000/transaction/save', json=data)
 
 if res.ok:
     print("Data Uploaded")
